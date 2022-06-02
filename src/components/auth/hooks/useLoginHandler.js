@@ -1,6 +1,6 @@
 import { db } from "../../../firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import React, { useReducer } from "react";
+import { useReducer } from "react";
 import { login } from "services";
 import { ToastHandler } from "utils/toastUtils";
 import { useAuth } from "../../../contexts";
