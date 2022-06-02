@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
-import { MdDarkMode } from "react-icons/md";
 import { FiSun } from "react-icons/fi";
 
 export const Navigation = () => {
