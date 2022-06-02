@@ -6,7 +6,7 @@ import { ToastHandler } from "utils";
 export const Profile = () => {
   const { setAuthUser, setAuthToken } = useAuth();
   const navigate = useNavigate();
-  const [userDetails, setUserDetails] = useState(
+  const [userDetails, ] = useState(
     JSON.parse(localStorage.getItem("authUser"))
   );
 
