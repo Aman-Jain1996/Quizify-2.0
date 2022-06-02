@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { useSignUpHandler } from "./hooks/useSignUpHandler";
@@ -15,7 +15,6 @@ export const SignUp = () => {
     dispatchError,
     signUpFormHandler,
   } = useSignUpHandler();
-  const navigate = useNavigate();
 
   const signUpHandler = () => signUpFormHandler(formData);
 
