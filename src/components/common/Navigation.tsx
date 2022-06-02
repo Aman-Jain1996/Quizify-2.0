@@ -32,7 +32,7 @@ export const Navigation = () => {
             className="cursor-pointer self-center rounded-lg bg-[#fff] px-4 py-2 hover:scale-110 hover:opacity-90"
             aria-label="button"
           >
-            <Link to="/login">
+            <Link to="/profile">
               <FaUserTie title="Profile" />
             </Link>
           </div>
