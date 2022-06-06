@@ -7,18 +7,20 @@ import { addScoreToDBService } from "services";
 
 export const Result = () => {
   const { authUser } = useAuth();
-  const { quizData, userAnswers, setUserAnswers } = useQuizData();
+  const { quizData, userAnswers } = useQuizData();
   const [resultData, setResultData] = useState(0);
   const navigate = useNavigate();
+  console.log(userAnswers);
 
   useEffect(() => {
     if (!quizData.categoryName) navigate("/", { replace: true });
-  }, [navigate]);
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     let score =
       quizData?.answers
-        ?.map((correctAnswer: string, index: number) =>
+        ?.map((correctAnswer: number, index: number) =>
           correctAnswer === userAnswers[index] ? true : false
         )
         ?.filter((a: number) => a).length * 20;
@@ -26,9 +28,9 @@ export const Result = () => {
 
     (async () => {
       await addScoreToDBService(authUser.uid, quizData.categoryName, score);
-      setUserAnswers([]);
     })();
-  }, [quizData]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -44,7 +46,7 @@ export const Result = () => {
             Check your answers here
           </p>
 
-          {quizData?.quiz?.map((quiz: any, index: any) => (
+          {quizData?.quiz?.map((quiz: any, index: number) => (
             <div key={index}>
               <div className="pl-8 m-8 mt-24">
                 <p className="text-3xl font-bold mt-16">
@@ -61,10 +63,10 @@ export const Result = () => {
 
               <ul className="my-12 mx-auto">
                 {quizData?.quiz[index].options.map(
-                  (option: any, optionIndex: any) => {
+                  (option: any, optionIndex: number) => {
                     if (
-                      optionIndex == quizData?.answers[index] &&
-                      optionIndex == userAnswers[index]
+                      optionIndex === quizData?.answers[index] &&
+                      optionIndex === userAnswers[index]
                     )
                       return (
                         <li
@@ -80,8 +82,8 @@ export const Result = () => {
                         </li>
                       );
                     else if (
-                      optionIndex == userAnswers[index] &&
-                      optionIndex != quizData?.answers[index]
+                      optionIndex === userAnswers[index] &&
+                      optionIndex !== quizData?.answers[index]
                     )
                       return (
                         <li
@@ -97,7 +99,7 @@ export const Result = () => {
                         </li>
                       );
                     else {
-                      if (optionIndex == quizData?.answers[index])
+                      if (optionIndex === quizData?.answers[index])
                         return (
                           <li
                             key={optionIndex}

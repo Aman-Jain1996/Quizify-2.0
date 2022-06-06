@@ -7,7 +7,7 @@ import { useQuizData } from "contexts";
 import { Loader } from "components/common/Loader";
 
 export const Question = () => {
-  const { quizData, setUserAnswers } = useQuizData();
+  const { quizData, userAnswers, setUserAnswers } = useQuizData();
   const [answer, setAnswer] = useState(-1);
   const [activeQuestion, setActiveQuestion] = useState(1);
   const navigate = useNavigate();
@@ -16,13 +16,16 @@ export const Question = () => {
   useEffect(() => {
     const timerId = setInterval(() => setTimer((timer) => timer - 1), 1000);
     return () => clearInterval(timerId);
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     if (timer === 0) nextClickHandler();
+    // eslint-disable-next-line
   }, [timer]);
 
   const nextClickHandler = () => {
+    if (userAnswers.length >= 5) setUserAnswers([]);
     setUserAnswers((ans: any) => ans.concat(answer));
     setAnswer(-1);
     if (activeQuestion === 5) {
@@ -40,7 +43,7 @@ export const Question = () => {
 
   const optionHandler = (e: any) => {
     const selectedAnswer = e.target.id.split("-")[1];
-    setAnswer(selectedAnswer);
+    setAnswer(Number(selectedAnswer));
   };
 
   return !quizData.categoryName ? (
@@ -84,7 +87,7 @@ export const Question = () => {
                   <div
                     key={index}
                     className={`font-semibold mx-12 my-8 h-24 bg-violet-200 rounded-lg border-l-8 px-4 py-4 border-violet-700 hover:bg-violet-400 ${
-                      answer == index && "bg-violet-400"
+                      answer === index && "bg-violet-400"
                     }`}
                   >
                     <label
@@ -96,7 +99,7 @@ export const Question = () => {
                         id={`option-${index}`}
                         type="radio"
                         name="option"
-                        checked={answer == index}
+                        checked={answer === index}
                         onChange={(e) => optionHandler(e)}
                       />
                       <p className="text-3xl">{option}</p>
