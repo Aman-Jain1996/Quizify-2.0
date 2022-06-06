@@ -14,6 +14,8 @@ import {
   Rules,
   SignUp,
   Loader,
+  Details,
+  ScoreCard,
 } from "components";
 import { useAuth } from "contexts";
 
@@ -70,7 +72,10 @@ function App() {
               <Profile />
             </PrivateRoute>
           }
-        />
+        >
+          <Route path="details" element={<Details />} />
+          <Route path="scores" element={<ScoreCard />} />
+        </Route>
       </Routes>
     </div>
   );

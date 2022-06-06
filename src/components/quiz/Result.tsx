@@ -35,7 +35,7 @@ export const Result = () => {
   return (
     <>
       <main className="mt-12 p-12 flex flex-col min-h-[70vh]">
-        <div className="flex justify-center text-5xl font-bold">
+        <div className="flex justify-center text-4xl font-bold">
           <h2 className="pb-8 border-b-4 rounded-md border-violet-600 px-4 text-center">
             Your Score : {resultData} / 100
           </h2>
@@ -49,7 +49,7 @@ export const Result = () => {
           {quizData?.quiz?.map((quiz: any, index: number) => (
             <div key={index}>
               <div className="pl-8 m-8 mt-24">
-                <p className="text-3xl font-bold mt-16">
+                <p className="text-2xl font-bold mt-16">
                   <span className="mr-2 text-violet-800">Q.{index + 1}</span>
                   {quiz.question}
                 </p>
@@ -71,13 +71,13 @@ export const Result = () => {
                       return (
                         <li
                           key={optionIndex}
-                          className="font-semibold mx-12 my-8 h-24 bg-green-200 rounded-lg border-l-8 px-4 py-4 border-green-700"
+                          className="font-semibold mx-12 my-8 h-20 bg-green-200 rounded-lg border-l-8 px-4 py-4 border-green-700"
                         >
                           <label
                             className="h-full flex items-center"
                             htmlFor={`option-${optionIndex}`}
                           >
-                            <p className="text-3xl ml-8">{option}</p>
+                            <p className="text-2xl ml-8">{option}</p>
                           </label>
                         </li>
                       );
@@ -88,13 +88,13 @@ export const Result = () => {
                       return (
                         <li
                           key={optionIndex}
-                          className="font-semibold mx-12 my-8 h-24 bg-red-200 rounded-lg border-l-8 px-4 py-4 border-red-700"
+                          className="font-semibold mx-12 my-8 h-20 bg-red-200 rounded-lg border-l-8 px-4 py-4 border-red-700"
                         >
                           <label
                             className="h-full flex items-center"
                             htmlFor={`option-${optionIndex}`}
                           >
-                            <p className="text-3xl ml-8">{option}</p>
+                            <p className="text-2xl ml-8">{option}</p>
                           </label>
                         </li>
                       );
@@ -103,13 +103,13 @@ export const Result = () => {
                         return (
                           <li
                             key={optionIndex}
-                            className="font-semibold mx-12 my-8 h-24 bg-green-200 rounded-lg border-l-8 px-4 py-4 border-green-700"
+                            className="font-semibold mx-12 my-8 h-20 bg-green-200 rounded-lg border-l-8 px-4 py-4 border-green-700"
                           >
                             <label
                               className="h-full flex items-center"
                               htmlFor={`option-${optionIndex}`}
                             >
-                              <p className="text-3xl ml-8">{option}</p>
+                              <p className="text-2xl ml-8">{option}</p>
                             </label>
                           </li>
                         );
@@ -117,13 +117,13 @@ export const Result = () => {
                         return (
                           <li
                             key={optionIndex}
-                            className="font-semibold mx-12 my-8 h-24 bg-violet-200 rounded-lg border-l-8 px-4 py-4 border-violet-700"
+                            className="font-semibold mx-12 my-8 h-20 bg-violet-200 rounded-lg border-l-8 px-4 py-4 border-violet-700"
                           >
                             <label
                               className="h-full flex items-center"
                               htmlFor={`option-${optionIndex}`}
                             >
-                              <p className="text-3xl ml-8">{option}</p>
+                              <p className="text-2xl ml-8">{option}</p>
                             </label>
                           </li>
                         );

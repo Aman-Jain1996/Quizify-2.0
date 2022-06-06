@@ -20,10 +20,10 @@ export const Rules = () => {
     <>
       {showRules ? (
         <main className="mt-12 p-12 flex flex-col min-h-[70vh]">
-          <h2 className="text-center text-5xl font-bold">
+          <h2 className="text-center text-4xl font-bold">
             Rules to remember while Taking Quiz
           </h2>
-          <ul className="my-12 w-3/4 max-w-[65%] mx-auto text-3xl">
+          <ul className="my-12 w-3/4 max-w-[65%] mx-auto text-2xl">
             <li className="font-semibold mx-12 my-8 h-32 bg-violet-200 rounded-lg border-l-8 flex items-center px-8 py-4 gap-4 border-violet-700">
               <IoMdCheckboxOutline />
               <p>
@@ -55,7 +55,7 @@ export const Rules = () => {
           </ul>
 
           <div
-            className="bg-violet-400 w-1/5 mx-auto text-center text-3xl mb-16 py-4 gap-4 px-6 rounded-lg font-semibold hover:bg-violet-700 hover:text-white"
+            className="bg-violet-400 w-1/5 mx-auto text-center text-3xl mb-16 py-4 gap-4 px-6 rounded-lg font-semibold hover:bg-violet-700 hover:text-white cursor-pointer"
             onClick={startQuizHandler}
           >
             <button>Start your Quiz Now </button>
