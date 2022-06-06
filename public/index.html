@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            animation: {
+              rotate: "rotate 5s linear infinite",
+            },
+            keyframes: {
+              rotate: {
+                "0%,100%": { transform: "scale(1) rotate(360deg)" },
+                "50%": { transform: "scale(.8) rotate(-360deg)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
     <meta
       name="description"
       content="A Quiz App for football lovers made using ReactJS"

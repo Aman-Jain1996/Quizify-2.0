@@ -1,14 +1,12 @@
 import { useAuth } from "contexts";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastHandler } from "utils";
 
 export const Profile = () => {
   const { setAuthUser, setAuthToken } = useAuth();
   const navigate = useNavigate();
-  const [userDetails, ] = useState(
-    JSON.parse(localStorage.getItem("authUser"))
-  );
+  const [userDetails] = useState(JSON.parse(localStorage.getItem("authUser")));
 
   const logOutHandler = () => {
     localStorage.removeItem("authUser");

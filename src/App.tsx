@@ -10,15 +10,18 @@ import {
   Navigation,
   PrivateRoute,
   Profile,
-  Question,
   Result,
   Rules,
   SignUp,
+  Loader,
 } from "components";
+import { useAuth } from "contexts";
 
 function App() {
+  const { showLoader } = useAuth();
   return (
     <div className="App">
+      {showLoader && <Loader />}
       <ToastContainer
         style={{ fontSize: "1.6rem" }}
         position="bottom-right"
@@ -45,7 +48,7 @@ function App() {
           }
         />
         <Route
-          path="/rules"
+          path="/quiz/:quizId"
           element={
             <PrivateRoute>
               <Rules />
@@ -53,15 +56,7 @@ function App() {
           }
         />
         <Route
-          path="/quiz"
-          element={
-            <PrivateRoute>
-              <Question />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/result"
+          path="/results"
           element={
             <PrivateRoute>
               <Result />

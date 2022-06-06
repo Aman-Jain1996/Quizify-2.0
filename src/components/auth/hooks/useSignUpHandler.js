@@ -11,7 +11,7 @@ import { useAuth } from "../../../contexts";
 import { useNavigate } from "react-router-dom";
 
 export const useSignUpHandler = () => {
-  const { setAuthToken, setAuthUser } = useAuth();
+  const { setAuthToken, setAuthUser, setShowLoader } = useAuth();
   const navigate = useNavigate();
 
   const initialFormState = {
@@ -162,6 +162,7 @@ export const useSignUpHandler = () => {
   };
 
   const signUpFormHandler = async (data) => {
+    setShowLoader(true);
     try {
       if (validateForm()) {
         const response = await signup(data.name, data.email, data.password);
@@ -176,6 +177,8 @@ export const useSignUpHandler = () => {
       }
     } catch (err) {
       console.error(err.message);
+    } finally {
+      setShowLoader(false);
     }
   };
 

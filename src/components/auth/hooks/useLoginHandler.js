@@ -7,7 +7,7 @@ import { useAuth } from "../../../contexts";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export const useLoginHandler = () => {
-  const { setAuthToken, setAuthUser } = useAuth();
+  const { setAuthToken, setAuthUser, setShowLoader } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -88,6 +88,7 @@ export const useLoginHandler = () => {
   };
 
   const loginFormHandler = async (data, bypassValidation) => {
+    setShowLoader(true);
     try {
       if (validateForm(bypassValidation)) {
         const response = await login(data.email, data.password);
@@ -114,6 +115,8 @@ export const useLoginHandler = () => {
       }
     } catch (err) {
       console.error(err.message);
+    } finally {
+      setShowLoader(false);
     }
   };
 
