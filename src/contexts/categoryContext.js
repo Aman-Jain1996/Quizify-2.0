@@ -19,6 +19,7 @@ export const CategoryProvider = ({ children }) => {
         setShowLoader(false);
       }
     })();
+    // eslint-disable-next-line
   }, []);
 
   return (
