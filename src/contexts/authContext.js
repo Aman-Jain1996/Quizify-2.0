@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
+  const [showLoader, setShowLoader] = useState(false);
   const localStorageUser = localStorage.getItem("authUser");
   const [authToken, setAuthToken] = useState(
     localStorage.getItem("authToken") ?? ""
@@ -13,7 +14,14 @@ export const AuthProvider = ({ children }) => {
   );
   return (
     <AuthContext.Provider
-      value={{ authToken, setAuthToken, authUser, setAuthUser }}
+      value={{
+        authToken,
+        setAuthToken,
+        authUser,
+        setAuthUser,
+        showLoader,
+        setShowLoader,
+      }}
     >
       {children}
     </AuthContext.Provider>

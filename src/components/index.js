@@ -11,3 +11,4 @@ export { Question } from "./quiz/Question";
 export { Result } from "./quiz/Result";
 export { Rules } from "./quiz/Rules";
 export { Profile } from "./profile/Profile";
+export { Loader } from "./common/Loader";
