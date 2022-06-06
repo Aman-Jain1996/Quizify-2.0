@@ -21,7 +21,7 @@ export const Category = () => {
                 />
               </div>
               <div className="h-[35%]">
-                <p className="text-center font-bold text-3xl my-8">
+                <p className="text-center font-bold text-2xl my-8">
                   {category.categoryName}
                 </p>
                 <Link to={`/quiz/${category.categoryId}`}>

@@ -51,7 +51,7 @@ export const Question = () => {
   ) : (
     <>
       <main className="mt-12 p-12 flex flex-col min-h-[70vh]">
-        <div className="flex justify-center text-5xl font-bold">
+        <div className="flex justify-center text-4xl font-bold">
           <h2 className="pb-8 border-b-4 rounded-md border-violet-600 w-max px-8 text-center">
             {quizData.categoryName}
           </h2>
@@ -61,7 +61,7 @@ export const Question = () => {
             <div className="flex justify-between">
               <p className=" flex items-center text-2xl pl-8 m-8 font-semibold">
                 Question :
-                <span className="font-bold ml-2 text-3xl text-violet-800">
+                <span className="font-bold ml-2 text-2xl text-violet-800">
                   {activeQuestion + " / " + quizData?.quiz.length}
                 </span>
               </p>
@@ -75,7 +75,7 @@ export const Question = () => {
               </p>
             </div>
             <div className="pl-8 m-8">
-              <p className="text-3xl font-bold mt-16">
+              <p className="text-[20px] font-bold mt-16">
                 <span className="mr-2 text-violet-800">Q.{activeQuestion}</span>
                 {quizData.quiz[activeQuestion - 1].question}
               </p>
@@ -86,7 +86,7 @@ export const Question = () => {
                 (option: string, index: number) => (
                   <div
                     key={index}
-                    className={`font-semibold mx-12 my-8 h-24 bg-violet-200 rounded-lg border-l-8 px-4 py-4 border-violet-700 hover:bg-violet-400 ${
+                    className={`font-semibold mx-12 my-8 h-20 bg-violet-200 rounded-lg border-l-8 px-4 py-4 border-violet-700 hover:bg-violet-400 ${
                       answer === index && "bg-violet-400"
                     }`}
                   >
@@ -102,7 +102,7 @@ export const Question = () => {
                         checked={answer === index}
                         onChange={(e) => optionHandler(e)}
                       />
-                      <p className="text-3xl">{option}</p>
+                      <p className="text-2xl">{option}</p>
                     </label>
                   </div>
                 )
