@@ -19,6 +19,7 @@ export const LeaderBoard = () => {
         setShowLoader(false);
       }
     })();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ export const LeaderBoard = () => {
         setShowLoader(false);
       }
     })();
+    // eslint-disable-next-line
   }, []);
 
   const getUserName = (id: any) => {

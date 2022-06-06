@@ -1,4 +1,4 @@
-import { useAuth, useCategoryData } from "contexts";
+import { useAuth } from "contexts";
 import { useEffect, useState } from "react";
 import { getLeaderboardDataService } from "services";
 
@@ -21,6 +21,7 @@ export const ScoreCard = () => {
         setShowLoader(false);
       }
     })();
+    // eslint-disable-next-line
   }, []);
 
   return (
