@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { FaUserTie } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
-import { FiSun } from "react-icons/fi";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { useTheme } from "contexts";
 
 export const Navigation = () => {
+  const { theme, changeTheme } = useTheme();
   return (
     <>
-      <header className="min-h-max h-24 py-12 px-24 flex text-stone-800 items-center justify-between font-bold text-4xl w-full bg-violet-300">
+      <header className="min-h-max h-24 py-12 px-24 flex text-stone-800 items-center justify-between font-bold text-4xl w-full bg-violet-300 ">
         <Link to="/" className="text-5xl cursor-pointer">
           Quizify
         </Link>
@@ -15,26 +17,32 @@ export const Navigation = () => {
             className="cursor-pointer self-center rounded-lg bg-[#fff] px-4 py-2 hover:scale-110 hover:opacity-90"
             aria-label="button"
           >
-            <Link to="/">
-              <FiSun title="Toggle Theme" />
-            </Link>
+            <div onClick={changeTheme}>
+              {theme === "light" ? (
+                <FiSun title="Toggle Theme" />
+              ) : (
+                <FiMoon title="Toggle Theme" />
+              )}
+            </div>
           </div>
-          <div
+          <Link
+            to="/leaderboard"
             className="cursor-pointer self-center rounded-lg bg-[#fff] px-4 py-2 hover:scale-110 hover:opacity-90"
             aria-label="button"
           >
-            <Link to="/leaderboard">
+            <span>
               <GiTrophyCup title="Leaderboard" />
-            </Link>
-          </div>
-          <div
+            </span>
+          </Link>
+          <Link
+            to="/profile/details"
             className="cursor-pointer self-center rounded-lg bg-[#fff] px-4 py-2 hover:scale-110 hover:opacity-90"
             aria-label="button"
           >
-            <Link to="/profile">
+            <span>
               <FaUserTie title="Profile" />
-            </Link>
-          </div>
+            </span>
+          </Link>
         </div>
       </header>
     </>

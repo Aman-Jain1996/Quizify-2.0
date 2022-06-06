@@ -50,16 +50,16 @@ export const Question = () => {
     <Loader />
   ) : (
     <>
-      <main className="mt-12 p-12 flex flex-col min-h-[70vh]">
+      <main className="p-12 pt-16 flex flex-col min-h-[70vh] dark:bg-gray-700">
         <div className="flex justify-center text-4xl font-bold">
-          <h2 className="pb-8 border-b-4 rounded-md border-violet-600 w-max px-8 text-center">
+          <h2 className="pb-8 border-b-4 rounded-md border-violet-600 w-max px-8 text-center dark:text-slate-100">
             {quizData.categoryName}
           </h2>
         </div>
         <form>
-          <div className="my-12 w-3/5 py-4 px-8 mx-auto shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-xl">
+          <div className="my-12 w-3/5 py-4 px-8 mx-auto shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-xl dark:bg-slate-400">
             <div className="flex justify-between">
-              <p className=" flex items-center text-2xl pl-8 m-8 font-semibold">
+              <p className=" flex items-center text-2xl pl-8 m-8 font-semibold dark:text-slate-100">
                 Question :
                 <span className="font-bold ml-2 text-2xl text-violet-800">
                   {activeQuestion + " / " + quizData?.quiz.length}
@@ -75,7 +75,7 @@ export const Question = () => {
               </p>
             </div>
             <div className="pl-8 m-8">
-              <p className="text-[20px] font-bold mt-16">
+              <p className="text-[20px] font-bold mt-16 dark:text-slate-100">
                 <span className="mr-2 text-violet-800">Q.{activeQuestion}</span>
                 {quizData.quiz[activeQuestion - 1].question}
               </p>

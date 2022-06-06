@@ -17,7 +17,7 @@ export const Details = () => {
     ToastHandler("success", "Logged Out Successfully!");
   };
   return (
-    <div className="h-max w-[60%] mx-auto flex items-center p-16 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg">
+    <div className="h-max w-[60%] mx-auto flex items-center p-16 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400">
       <h2 className="relative text-4xl font-bold after:absolute after:content-[''] after:w-[120%] after:h-[2px] after:-bottom-2 after:bg-black after:-left-[10%]">
         Profile Details
       </h2>
@@ -30,7 +30,7 @@ export const Details = () => {
             Name :
           </label>
           <label
-            className="block text-3xl bg-white w-full"
+            className="block text-3xl bg-white w-full dark:bg-inherit dark:text-slate-50"
             placeholder="email@domain.com"
           >
             {userDetails.name}
@@ -44,7 +44,7 @@ export const Details = () => {
             Email :
           </label>
           <label
-            className="block text-3xl bg-white w-full"
+            className="block text-3xl bg-white w-full dark:bg-inherit dark:text-slate-50"
             placeholder="email@domain.com"
           >
             {userDetails.email}

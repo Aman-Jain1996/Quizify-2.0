@@ -16,13 +16,15 @@ import {
   Loader,
   Details,
   ScoreCard,
+  ForgotPassword,
 } from "components";
-import { useAuth } from "contexts";
+import { useAuth, useTheme } from "contexts";
 
 function App() {
   const { showLoader } = useAuth();
+  const { theme } = useTheme();
   return (
-    <div className="App">
+    <div className={`${theme === "dark" ? "dark" : ""}`}>
       {showLoader && <Loader />}
       <ToastContainer
         style={{ fontSize: "1.6rem" }}
@@ -40,6 +42,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/resetPassword" element={<ForgotPassword />} />
         <Route path="/leaderboard" element={<LeaderBoard />} />
         <Route
           path="/categories"

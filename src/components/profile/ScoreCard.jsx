@@ -11,7 +11,6 @@ export const ScoreCard = () => {
     (async () => {
       try {
         let response = await getLeaderboardDataService();
-        console.log(response);
         setScoreboardData(
           response.filter((data) => data.userId === authUser.uid)
         );
@@ -26,9 +25,9 @@ export const ScoreCard = () => {
 
   return (
     <>
-      <section className="mx-auto w-[80%] p-12 flex justify-start flex-col min-h-[70vh] shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg">
+      <section className="mx-auto w-[80%] p-12 flex justify-start flex-col min-h-[70vh] shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400">
         <table>
-          <caption className="text-4xl font-bold border-b-4 px-4 pb-2 border-violet-300 w-max m-auto rounded-lg mb-20">
+          <caption className="text-4xl font-bold border-b-4 px-4 pb-2 border-violet-300 w-max m-auto rounded-lg mb-20 dark:text-slate-100">
             ScoreCard
           </caption>
           <thead className="bg-violet-300 text-3xl font-medium w-full">
@@ -43,7 +42,7 @@ export const ScoreCard = () => {
           </thead>
           <tbody>
             {!scoreboardData.length ? (
-              <tr className="text-2xl w-full text-center font-semi-bold even:bg-violet-100">
+              <tr className="text-2xl w-full text-center font-semi-bold">
                 <td data-label="Rank" colspan="2" className="py-6">
                   No Results
                 </td>

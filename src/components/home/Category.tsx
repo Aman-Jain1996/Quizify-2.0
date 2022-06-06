@@ -5,8 +5,10 @@ export const Category = () => {
   const { categories } = useCategoryData();
   return (
     <>
-      <main className="mt-12 p-12 pt-8 pb-0 flex flex-col min-h-[70vh]">
-        <h2 className="text-center text-5xl font-bold">Select the Category</h2>
+      <main className="p-12 pt-20 pb-0 flex flex-col dark:bg-gray-700">
+        <h2 className="text-center text-5xl font-bold dark:text-slate-100">
+          Select the Category
+        </h2>
         <div className="flex justify-evenly my-24 mb-16">
           {categories.map((category: any) => (
             <div
@@ -21,7 +23,7 @@ export const Category = () => {
                 />
               </div>
               <div className="h-[35%]">
-                <p className="text-center font-bold text-2xl my-8">
+                <p className="text-center font-bold text-2xl my-8 dark:text-gray-300">
                   {category.categoryName}
                 </p>
                 <Link to={`/quiz/${category.categoryId}`}>
