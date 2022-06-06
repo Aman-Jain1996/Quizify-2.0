@@ -3,6 +3,7 @@ export { SignUp } from "./auth/SignUp";
 export { useLoginHandler } from "./auth/hooks/useLoginHandler";
 export { useSignUpHandler } from "./auth/hooks/useSignUpHandler";
 export { PrivateRoute } from "./auth/PrivateRoute";
+export { ForgotPassword } from "./auth/ForgotPassword";
 export { Navigation } from "./common/Navigation";
 export { Loader } from "./common/Loader";
 export { Category } from "./home/Category";

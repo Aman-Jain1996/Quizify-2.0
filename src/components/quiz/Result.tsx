@@ -10,7 +10,6 @@ export const Result = () => {
   const { quizData, userAnswers } = useQuizData();
   const [resultData, setResultData] = useState(0);
   const navigate = useNavigate();
-  console.log(userAnswers);
 
   useEffect(() => {
     if (!quizData.categoryName) navigate("/", { replace: true });
@@ -34,22 +33,25 @@ export const Result = () => {
 
   return (
     <>
-      <main className="mt-12 p-12 flex flex-col min-h-[70vh]">
+      <main className="p-12 pt-16 flex flex-col min-h-[70vh] dark:bg-gray-700">
         <div className="flex justify-center text-4xl font-bold">
-          <h2 className="pb-8 border-b-4 rounded-md border-violet-600 px-4 text-center">
+          <h2 className="pb-8 border-b-4 rounded-md border-violet-600 px-4 text-center dark:text-slate-100">
             Your Score : {resultData} / 100
           </h2>
         </div>
 
         <div className="my-12 w-3/5 py-4 px-8 mx-auto">
-          <p className="text-center text-3xl pl-8 m-8 font-semibold">
+          <p className="text-center text-3xl pl-8 m-8 font-semibold dark:text-gray-300">
             Check your answers here
           </p>
 
           {quizData?.quiz?.map((quiz: any, index: number) => (
-            <div key={index}>
+            <div
+              key={index}
+              className="dark:bg-slate-400 dark:py-1 dark:rounded-lg dark:mb-8"
+            >
               <div className="pl-8 m-8 mt-24">
-                <p className="text-2xl font-bold mt-16">
+                <p className="text-2xl font-bold mt-16 dark:text-slate-100">
                   <span className="mr-2 text-violet-800">Q.{index + 1}</span>
                   {quiz.question}
                 </p>

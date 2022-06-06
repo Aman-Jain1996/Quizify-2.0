@@ -19,8 +19,8 @@ export const Rules = () => {
   return (
     <>
       {showRules ? (
-        <main className="mt-12 p-12 flex flex-col min-h-[70vh]">
-          <h2 className="text-center text-4xl font-bold">
+        <main className="p-12 pt-16 flex flex-col min-h-[70vh] dark:bg-gray-700">
+          <h2 className="text-center text-4xl font-bold dark:text-slate-100">
             Rules to remember while Taking Quiz
           </h2>
           <ul className="my-12 w-3/4 max-w-[65%] mx-auto text-2xl">

@@ -171,7 +171,7 @@ export const useSignUpHandler = () => {
           setAuthUser(response.user);
           localStorage.setItem("authUser", JSON.stringify(response.user));
           localStorage.setItem("authToken", response.token);
-          ToastHandler("success", "Signed up and Logged in successfully!");
+          ToastHandler("success", "Signed up Successfully!");
           navigate("/", { replace: true });
         }
       }
