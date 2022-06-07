@@ -4,7 +4,7 @@ export const Home = () => {
   return (
     <section className="flex p-4 items-center min-h-[95vh] flex-col dark:bg-gray-700 md:flex-row md:min-h-[92vh]">
       <div className="mt-8 basis-1/2 p-4 flex flex-col justify-evenly items-center md:px-0">
-        <p className="text-5xl font-bold leading-normal dark:text-slate-50 md:text-5xl md:text-center">
+        <p className="text-5xl font-bold leading-normal dark:text-slate-50 md:text-5xl text-center">
           "Are you a Football Fan?"
         </p>
         <p className="my-12 mx-auto text-center text-2xl dark:text-gray-300 md:mx-4 md:max-w-[80%]">

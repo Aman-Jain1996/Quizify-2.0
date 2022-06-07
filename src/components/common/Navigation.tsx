@@ -12,7 +12,7 @@ export const Navigation = () => {
         <Link to="/" className="text-5xl cursor-pointer">
           Quizify
         </Link>
-        <div className=" basis-1/3 flex justify-between text-4xl md:basis-1/4 lg:basis-1/5">
+        <div className=" basis-2/5 flex justify-between text-4xl md:basis-1/4 lg:basis-1/5">
           <div
             className="cursor-pointer self-center rounded-lg bg-[#fff] px-4 py-2 hover:scale-110 hover:opacity-90"
             aria-label="button"

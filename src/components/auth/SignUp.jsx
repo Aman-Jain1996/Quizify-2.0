@@ -20,8 +20,8 @@ export const SignUp = () => {
 
   return (
     <>
-      <div className="dark:bg-gray-700 py-[16px] min-h-[92vh]">
-        <section className=" py-12 min-h-[70vh] w-[90%] mx-auto flex items-center my-12 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400 md:w-[60%] lg:w-[50%]">
+      <div className="dark:bg-gray-700 py-[16px] min-h-[92vh] grid place-items-center">
+        <section className=" py-12 h-max w-[95%] mx-auto flex items-center my-12 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400 md:w-[60%] lg:w-[50%]">
           <h2 className="relative text-5xl font-bold after:absolute after:content-[''] after:w-[120%] after:h-[2px] after:-bottom-2 after:bg-black after:-left-[10%]">
             SignUp
           </h2>

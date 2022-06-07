@@ -13,7 +13,7 @@ export const Category = () => {
           {categories.map((category: any) => (
             <div
               key={category.categoryId}
-              className="w-[80%] flex flex-col justify-between h-[60vh] pb-8 rounded-xl overflow-hidden shadow-[0px_0px_4px_0px_rgba(0,0,0,.3)] hover:scale-105 "
+              className="w-[90%] flex flex-col justify-between h-[60vh] pb-8 rounded-xl overflow-hidden shadow-[0px_0px_4px_0px_rgba(0,0,0,.3)] hover:scale-105 "
             >
               <div className="h-[60%]">
                 <img
