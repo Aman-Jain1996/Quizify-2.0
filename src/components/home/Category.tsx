@@ -5,15 +5,15 @@ export const Category = () => {
   const { categories } = useCategoryData();
   return (
     <>
-      <main className="p-12 pt-20 pb-0 flex flex-col dark:bg-gray-700">
+      <main className="p-4 pt-16 pb-0 flex flex-col dark:bg-gray-700 min-h-[92vh] md:px-8 lg:px-16 xl:px-48">
         <h2 className="text-center text-5xl font-bold dark:text-slate-100">
           Select the Category
         </h2>
-        <div className="flex justify-evenly my-24 mb-16">
+        <div className="flex flex-col items-center gap-16 my-24 mb-16 md:flex-row md:gap-8 lg:gap-16">
           {categories.map((category: any) => (
             <div
               key={category.categoryId}
-              className="w-1/4 flex flex-col justify-between h-[60vh] pb-8 rounded-xl overflow-hidden shadow-[0px_0px_4px_0px_rgba(0,0,0,.3)] hover:scale-105 "
+              className="w-[90%] flex flex-col justify-between h-[60vh] pb-8 rounded-xl overflow-hidden shadow-[0px_0px_4px_0px_rgba(0,0,0,.3)] hover:scale-105 "
             >
               <div className="h-[60%]">
                 <img

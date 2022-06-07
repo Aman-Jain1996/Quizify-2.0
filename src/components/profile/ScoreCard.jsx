@@ -25,7 +25,7 @@ export const ScoreCard = () => {
 
   return (
     <>
-      <section className="mx-auto w-[80%] p-12 flex justify-start flex-col min-h-[70vh] shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400">
+      <section className="mx-auto w-full py-12 px-8 flex justify-start flex-col min-h-[70vh] shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400 md:w-[80%] lg:w-[60%]">
         <table>
           <caption className="text-4xl font-bold border-b-4 px-4 pb-2 border-violet-300 w-max m-auto rounded-lg mb-20 dark:text-slate-100">
             ScoreCard
