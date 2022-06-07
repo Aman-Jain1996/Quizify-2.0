@@ -6,6 +6,7 @@ export { PrivateRoute } from "./auth/PrivateRoute";
 export { ForgotPassword } from "./auth/ForgotPassword";
 export { Navigation } from "./common/Navigation";
 export { Loader } from "./common/Loader";
+export { NotFound } from "./common/NotFound";
 export { Category } from "./home/Category";
 export { Home } from "./home/Home";
 export { LeaderBoard } from "./leaderboard/LeaderBoard";
