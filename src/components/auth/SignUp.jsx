@@ -20,20 +20,20 @@ export const SignUp = () => {
 
   return (
     <>
-      <div className="dark:bg-gray-700 p-[16px]">
-        <section className=" py-12 min-h-[70vh] w-[40%] mx-auto flex items-center my-12 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400">
-          <h2 className="relative text-6xl font-bold after:absolute after:content-[''] after:w-[120%] after:h-[2px] after:-bottom-2 after:bg-black after:-left-[10%]">
+      <div className="dark:bg-gray-700 py-[16px] min-h-[92vh]">
+        <section className=" py-12 min-h-[70vh] w-[90%] mx-auto flex items-center my-12 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400 md:w-[60%] lg:w-[50%]">
+          <h2 className="relative text-5xl font-bold after:absolute after:content-[''] after:w-[120%] after:h-[2px] after:-bottom-2 after:bg-black after:-left-[10%]">
             SignUp
           </h2>
-          <div className="mt-16 w-[80%] my-4 p-4">
+          <div className="mt-16 w-[90%] my-4 p-4">
             <div className="flex mb-2 items-center m-auto">
-              <label htmlFor="name" className="text-3xl font-semibold w-[30%]">
+              <label htmlFor="name" className="text-2xl font-semibold w-[25%]">
                 Name
               </label>
               <input
                 type="text"
                 id="name"
-                className="block w-[70%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
+                className="block w-[75%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
                 placeholder="John Snow"
                 value={formData.name}
                 onChange={(e) =>
@@ -59,13 +59,13 @@ export const SignUp = () => {
               )}
             </div>
             <div className="flex mb-2 items-center m-auto">
-              <label htmlFor="email" className="text-3xl font-semibold w-[30%]">
+              <label htmlFor="email" className="text-2xl font-semibold w-[25%]">
                 Email
               </label>
               <input
                 type="email"
                 id="email"
-                className="block w-[70%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
+                className="block w-[75%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
                 placeholder="email@domain.com"
                 value={formData.email}
                 onChange={(e) =>
@@ -93,14 +93,14 @@ export const SignUp = () => {
             <div className="relative flex mb-2 items-center m-auto">
               <label
                 htmlFor="password"
-                className="text-3xl font-semibold w-[30%]"
+                className="text-2xl font-semibold w-[25%]"
               >
                 Password
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
-                className="block w-[70%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
+                className="block w-[75%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
                 placeholder="Your Password"
                 value={formData.password}
                 onChange={(e) =>
@@ -134,14 +134,14 @@ export const SignUp = () => {
             <div className="relative flex mb-2 items-center m-auto">
               <label
                 htmlFor="confirmPassword"
-                className="text-3xl font-semibold w-[30%]"
+                className="text-2xl font-semibold w-[25%]"
               >
                 Confirm Password
               </label>
               <input
                 type={showConfirmPassword ? "text" : "password"}
                 id="confirmPassword"
-                className="block w-[70%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
+                className="block w-[75%] text-3xl bg-white w-full border border-slate-300 rounded-md p-4 shadow-sm focus:outline-none focus:border-violet-300 focus:ring-violet-500 focus:ring-1 "
                 placeholder="Your Password"
                 value={formData.confirmPassword}
                 onChange={(e) =>
@@ -175,7 +175,7 @@ export const SignUp = () => {
           </div>
 
           <button
-            className="bg-violet-300 w-[80%] p-4 text-3xl font-bold rounded-md hover:bg-violet-400"
+            className="bg-violet-300 w-[80%] p-4 text-2xl font-bold rounded-md hover:bg-violet-400"
             onClick={signUpHandler}
           >
             Create Account

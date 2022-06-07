@@ -50,16 +50,16 @@ export const Question = () => {
     <Loader />
   ) : (
     <>
-      <main className="p-12 pt-16 flex flex-col min-h-[70vh] dark:bg-gray-700">
+      <main className="p-4 pt-16 flex flex-col min-h-[92vh] dark:bg-gray-700">
         <div className="flex justify-center text-4xl font-bold">
           <h2 className="pb-8 border-b-4 rounded-md border-violet-600 w-max px-8 text-center dark:text-slate-100">
             {quizData.categoryName}
           </h2>
         </div>
         <form>
-          <div className="my-12 w-3/5 py-4 px-8 mx-auto shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-xl dark:bg-slate-400">
+          <div className="my-12 w-[90%] py-4 mx-auto shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-xl dark:bg-slate-400 md:w-[80%] lg:w-[60%]">
             <div className="flex justify-between">
-              <p className=" flex items-center text-2xl pl-8 m-8 font-semibold dark:text-slate-100">
+              <p className=" flex items-center text-2xl m-8 font-semibold dark:text-slate-100">
                 Question :
                 <span className="font-bold ml-2 text-2xl text-violet-800">
                   {activeQuestion + " / " + quizData?.quiz.length}
@@ -111,8 +111,8 @@ export const Question = () => {
           </div>
 
           <div>
-            <div className="flex justify-between my-12 w-3/5 py-4 px-8 mx-auto text-3xl font-semibold">
-              <div className="w-[20%] hover:scale-110">
+            <div className="flex justify-between w-[90%] py-4 px-8 mx-auto text-3xl font-semibold md:w-[70%] lg:w-[50%]">
+              <div className="w-max hover:scale-110">
                 <button
                   className="bg-violet-100 p-4 flex items-center justify-evenly hover:rounded-lg hover:bg-violet-300 px-12"
                   onClick={quitClickHandler}
@@ -123,7 +123,7 @@ export const Question = () => {
                   </span>
                 </button>
               </div>
-              <div className="w-[20%] hover:scale-110">
+              <div className="w-max hover:scale-110">
                 <button
                   className="bg-violet-100 p-4 flex items-center justify-evenly hover:rounded-lg hover:bg-violet-300 px-12"
                   onClick={nextClickHandler}

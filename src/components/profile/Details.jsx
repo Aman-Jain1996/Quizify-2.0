@@ -17,7 +17,7 @@ export const Details = () => {
     ToastHandler("success", "Logged Out Successfully!");
   };
   return (
-    <div className="h-max w-[60%] mx-auto flex items-center p-16 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400">
+    <div className="h-max w-[90%] mx-auto flex items-center p-4 flex-col shadow-[0px_0px_5px_0px_rgba(0,0,0,.2)] rounded-lg dark:bg-slate-400 md:w-[60%] lg:w-[50%]">
       <h2 className="relative text-4xl font-bold after:absolute after:content-[''] after:w-[120%] after:h-[2px] after:-bottom-2 after:bg-black after:-left-[10%]">
         Profile Details
       </h2>
