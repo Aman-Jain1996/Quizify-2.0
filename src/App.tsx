@@ -17,6 +17,7 @@ import {
   Details,
   ScoreCard,
   ForgotPassword,
+  NotFound,
 } from "components";
 import { useAuth, useTheme } from "contexts";
 
@@ -79,6 +80,7 @@ function App() {
           <Route path="details" element={<Details />} />
           <Route path="scores" element={<ScoreCard />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
