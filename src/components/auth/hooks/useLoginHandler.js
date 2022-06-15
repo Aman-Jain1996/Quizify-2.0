@@ -108,7 +108,7 @@ export const useLoginHandler = () => {
             localStorage.setItem("authUser", JSON.stringify(userObj));
           });
           ToastHandler("success", "Logged In successfully!");
-          location.state.path
+          location?.state?.path
             ? navigate(location.state.path, { replace: true })
             : navigate("/", { replace: true });
         }
