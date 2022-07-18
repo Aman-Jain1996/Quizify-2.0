@@ -43,7 +43,7 @@ export const ScoreCard = () => {
           <tbody>
             {!scoreboardData.length ? (
               <tr className="text-2xl w-full text-center font-semi-bold">
-                <td data-label="Rank" colspan="2" className="py-6">
+                <td data-label="Rank" colSpan="2" className="py-6">
                   No Results
                 </td>
               </tr>
